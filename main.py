@@ -38,10 +38,10 @@ def main() :
     params.use_cuda = use_cuda
     if use_cuda : 
         print('==> Using GPU %s' % params.gpu_id)
-        os.environ['CUDA_VISIBLE_DEVICES'] = params.gpu_id
-        params.gpu_list = [int(x) for x in params.gpu_id.split(',')]
-        if len(params.gpu_list) == 1:
-            torch.cuda.set_device(params.gpu_list[0])
+#         os.environ['CUDA_VISIBLE_DEVICES'] = params.gpu_id
+#         params.gpu_list = [int(x) for x in params.gpu_id.split(',')]
+#         if len(params.gpu_list) == 1:
+#             torch.cuda.set_device(params.gpu_list[0])
     else : 
         print('==> No CUDA GPUs found --> Using CPU')
 
